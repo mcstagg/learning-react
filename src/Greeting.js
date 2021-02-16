@@ -1,23 +1,27 @@
 import React from 'react';
 
-export const Greeting = (props) => {
+export const Greeting = ({
+    name , 
+    favNumber ,
+    favColors
+}) => {
 
-    console.log(props);
+    // console.log(props);
 
     return (
         <>
         <h2>
-            Peace Among Worlds {props.name} !!!
+            Peace Among Worlds {name} !!!
         </h2>
         <h2>
-            {props.name}'s favorite number is {props.favNumber}
+            {name}'s favorite number is {favNumber}
         </h2>
         <h3>
-            {props.name}'s favorite colors are: 
+            {name}'s favorite colors are: 
         </h3>
         <ul>
-            {props.favColors && [ ... new Set(props.favColors)].map(x => <li key={x}>{x}</li>)}
-            {!props.favColors && <li>None</li>}
+            {favColors && [ ... new Set(favColors)].map(x => <li key={x}>{x}</li>)}
+            {!favColors && <li>None</li>}
         </ul>
         </>
     );
