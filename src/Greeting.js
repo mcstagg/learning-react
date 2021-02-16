@@ -16,7 +16,7 @@ export const Greeting = (props) => {
             {props.name}'s favorite colors are: 
         </h3>
         <ul>
-            {props.favColors && props.favColors.map(x => <li>{x}</li>)}
+            {props.favColors && [ ... new Set(props.favColors)].map(x => <li key={x}>{x}</li>)}
             {!props.favColors && <li>None</li>}
         </ul>
         </>

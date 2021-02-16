@@ -5,7 +5,7 @@ import { Greeting } from './Greeting';
 const App = () => {
   return (
     <>
-    <Greeting name="Mike" favNumber={420} favColors={["cyan", "magenta", "medow green"]} />
+    <Greeting name="Mike" favNumber={420} favColors={["cyan", "magenta", "medow green", "cyan"]} />
     <h1>
       Hello from React !!!!!!!!!!
     </h1>
