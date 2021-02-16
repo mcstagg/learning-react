@@ -12,6 +12,12 @@ export const Greeting = (props) => {
         <h2>
             {props.name}'s favorite number is {props.favNumber}
         </h2>
+        <h3>
+            {props.name}'s favorite colors are: 
+        </h3>
+        <ul>
+            {props.favColors && props.favColors.map(x => <li>{x}</li>)}
+        </ul>
         </>
     );
 };
